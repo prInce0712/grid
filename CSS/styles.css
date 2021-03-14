@@ -116,7 +116,7 @@ p {
   grid-area: kira;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 575px) {
   .container {
     margin: 30px;
     width: 325px;
