@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(210, 46%, 95%);
+}
+
+img {
+  border-radius: 50%;
+}
+
+span {
+  font-size: 13px;
+  opacity: 50%;
+}
+
+h3 {
+  line-height: 1em;
+}
+
+h4 {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.50rem;
+  font-size: 20px;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 13px;
+  opacity: 70%;
+}
+
+.grid-1 img {
+  border: 2px solid hsl(0, 0%, 100%);
+}
+
+.grid-2 img {
+  border: 2px solid hsl(219, 29%, 14%);
+}
+
+.grid-4 img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.svg {
+  position: absolute;
+  right: 125px;
+}
+
+.container {
+  font-family: Barlow Semi Condensed;
+  font-weight: bold;
+  line-height: 1.5;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.50fr 0.50fr 0.50fr 0.50fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1.0em;
+  grid-template-areas: "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  margin: 5rem;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  align-items: center;
+}
+
+.grid-1 {
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(263, 55%, 52%);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  grid-area: daniel;
+}
+
+.grid-2 {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(217, 19%, 35%);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  grid-area: jonathan;
+}
+
+.grid-3 {
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
+  box-shadow: 6px 18px 25px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  grid-area: jeanette;
+}
+
+.grid-4 {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(219, 29%, 14%);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  grid-area: patrick;
+}
+
+.grid-5 {
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
+  box-shadow: 33px 37px 42px -28px rgba(0, 0, 0, 0.27);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  grid-area: kira;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    margin: 30px;
+    width: 325px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.50fr 1fr;
+    grid-template-areas: "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira";
+  }
+
+  br {
+    display: none;
+  }
+
+  h4 {
+    align-items: baseline;
+  }
+
+  .svg {
+    position: absolute;
+    right: 20px;
+  }
+
+  .attribution {
+    position: sticky;
+  }
+}
